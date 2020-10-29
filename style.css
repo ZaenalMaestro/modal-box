@@ -1,0 +1,49 @@
+.popup .bayangan{
+   background: rgba(0, 0, 0, 0.5);
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   z-index: 1; 
+   top: 0;
+   left: 0;   
+   display: none;
+}
+/* tombol close */
+.popup .tombol-close{
+   background: red;
+   width: 20px;
+   border-radius: 50%;
+   text-align: center;
+   cursor: pointer;
+   color: white;
+   font-weight: 800;
+   margin-left: auto;
+}
+
+.popup .konten-popup{
+   position: absolute;
+   z-index: 2;
+   background: white;
+   width: 250px;
+   height: 200px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   padding: 20px;
+   box-sizing: border-box;
+}
+
+.popup input{
+   display: block;
+   margin-bottom:15px;
+   width: 200px;
+}
+
+.popup.active .bayangan{
+   display: block;
+}
+
+.popup.active .konten-popup{
+   transition: 300ms;
+   transform: translate(-50%, -50%) scale(1);
+}

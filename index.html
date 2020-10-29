@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="style.css">
+   <title>Modal Box</title>
+</head>
+
+<body>
+   <!-- tombol untuk menampilkan popup -->
+   <button type="button" id="tombol-popup">Tampilkan Popup</button>
+   <div class="popup">
+      <div class="bayangan"></div>
+      <div class="konten-popup">
+         <!-- tombol -->
+         <div class="tombol-close">&times;</div>
+         <!-- form- input -->
+         <form method="post">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama">
+            <label for="alamat">Alamat</label>
+            <input type="text" id="alamat">
+            <!-- tombol edit data -->
+            <button type="button" class="tombol-edit">Edit Data</button>
+         </form>
+      </div>
+   </div>
+   <script>
+      // ketika tombol
+      document.querySelector('.tombol-close').addEventListener('click', function () {
+         document.querySelector('.popup').classList.toggle('active');
+      });
+
+      document.getElementById('tombol-popup').addEventListener('click', function () {
+         document.querySelector('.popup').classList.toggle('active');
+      });
+   </script>
+</body>
+
+</html>
